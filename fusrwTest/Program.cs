@@ -11,7 +11,7 @@ namespace fusrwTest
     {
         static void Main(string[] args)
         {
-            if (args.Length == 9)
+            if (args.Length == 10)
             {
                 Console.Write("0x47C6D666");
             }
