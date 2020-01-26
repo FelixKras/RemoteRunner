@@ -102,7 +102,7 @@ namespace ServerApp
         private static void ParseAndLogMessage(byte[] by1Message)
         {
             Regex rgxClientNumber=new Regex(@"(?<=IAMNUMBER)\d+(?=#)");
-            Regex rgxMessage = new Regex(@"(?<=#).*(?=#FOOTER)");
+            Regex rgxMessage = new Regex(@"(?<=#)0[xX][\da-fA-F]+");
 
             string sMessage = Encoding.ASCII.GetString(by1Message);
             if (sMessage.Contains("IAMNUMBER") && sMessage.Contains("FOOTER"))
